@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+   font-size: 2rem;
+   margin: 0.01%;
+   
+   transition: background-color 0.3s, color 0.3s;
+}
+h1{
+    font-size: 25px;
+    padding: 15px;
+    color: #1e60ca;
+    
+    border: none;
+}
+.headcontainer{
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid  #e2e8f0;
+    display: flex;
+    justify-content: space-between;
+    width: 99.9%;
+}
+.headcontainer button{
+    width: 40px;
+    font-size: 2rem;
+    height: 40px;
+    border-radius: 50%;
+   margin-top: 5px;
+   margin-right: 10px;
+   background-color: #1e60ca;
+   color: white;
+   cursor: pointer;
+   border: none;
+}
+
+.headcontainer p{
+    margin-right: 20px;
+    font-size: 23px;
+    
+}
+.maincontainer{
+    width: 99.9%;
+    display: flex;
+
+}
+
+.sidebar{
+    width: 17%;
+    min-height: 600px;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    justify-content:start;
+    
+}
+
+.sidebar ul button{
+    padding-right: 60px;
+    width: 200px;
+    height: 40px;
+    font-size: 0.9rem;
+    border-radius:5px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    
+    
+}
+
+i{
+    padding-right: 10px;
+}
+
+.sidebar ul button:hover{
+background-color: #3b82f6;
+transition: 0.6s;
+color: #f8fafc;
+
+}
+
+.sidebar ul i span{
+    font-family: sans-serif; 
+    font-weight:500;
+}
+
+
+.sidebar ul{
+ list-style-type: none;
+ display: flex;  
+ flex-direction: column;
+ gap: 0.3rem;
+ padding-top: 30px;
+ 
+    
+}
+
+.sidebar ul a{
+    text-decoration: none;
+    color: black;
+   
+} 
+
+
+.mainboard{
+    width: 90%;
+   font-size: 1rem;
+   margin: 10px;
+   font-family:Arial, Helvetica, sans-serif;
+   background-color: #f8fafc;
+   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+p{
+    color: #64748b;
+}
+
+.project-header{
+    display: flex ;
+    justify-content: space-between;
+    line-height: 30px;
+}
+
+.project-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 12px;
+    background: white;
+    transition: 0.5s;
+
+  }
+.project-card:hover{
+    transform: translate(-1px,-7px);
+}
+
+  
+  .progress-bar {
+    height: 8px;
+    background: #e2e8f0;
+    border-radius: 4px;
+    margin: 10px 0;
+  }
+  
+  .progress {
+    height: 100%;
+    background: #3b82f6;
+    border-radius: 4px;
+  }
+  
+  .priority.high {
+    background: #ef4444;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+  }
+  .details{
+    display: flex;
+    justify-content: space-between;
+  }
+  .project-footer{
+    display: flex;
+    justify-content: space-between;
+    
+  }

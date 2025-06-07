@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+   font-size: 2rem;
+   margin: 0.01%;
+   
+   transition: background-color 0.3s, color 0.3s;
+}
+
+h1{
+    font-size: 25px;
+    padding: 15px;
+    color: #1e60ca;
+    
+    border: none;
+}
+
+.headcontainer{
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid  #e2e8f0;
+    display: flex;
+    justify-content: space-between;
+    width: 99.9%;
+}
+.headcontainer button{
+    width: 40px;
+    font-size: 2rem;
+    height: 40px;
+    border-radius: 50%;
+   margin-top: 5px;
+   margin-right: 10px;
+   background-color: #1e60ca;
+   color: white;
+   cursor: pointer;
+   border: none;
+}
+
+.headcontainer p{
+    margin-right: 20px;
+    font-size: 23px;
+    
+}
+.maincontainer{
+    width: 99.9%;
+    display: flex;
+
+}
+
+.sidebar{
+    width: 20%;
+    min-height: 600px;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    justify-content:start;
+    
+}
+
+.sidebar ul button{
+    padding-right: 60px;
+    width: 200px;
+    height: 40px;
+    font-size: 0.9rem;
+    border-radius:5px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    
+    
+}
+
+i{
+    padding-right: 10px;
+}
+
+.sidebar ul button:hover{
+background-color: #3b82f6;
+transition: 0.6s;
+color: #f8fafc;
+
+}
+
+.sidebar ul i span{
+    font-family: sans-serif; 
+    font-weight:500;
+}
+
+
+.sidebar ul{
+ list-style-type: none;
+ display: flex;  
+ flex-direction: column;
+ gap: 0.3rem;
+ padding-top: 30px;
+ 
+    
+}
+
+.sidebar ul a{
+    text-decoration: none;
+    color: black;
+   
+} 
+
+.mainboard{
+width: 100%;
+font-size: 1.1rem;
+background-color: #f8fafc;
+}
+.report-card h4 i{
+   color: #3b82f6;
+}
+
+.report-card span{
+ color: #7a8fad;
+}
+
+
+.report-card {
+    margin: 20px;
+    width: 90%;
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: 0.5s;
+    
+  }
+
+.report-card:hover{
+  transform: translate(-1px,-10px);
+}
+
+  
+  .report-card.urgent {
+    border-left: 4px solid #ff5252;
+  }
+  
+  .progress-bars div {
+    margin: 10px 0;
+  }
+  
+  .bar {
+    height: 8px;
+    background: #eee;
+    border-radius: 4px;
+    margin: 5px 0;
+  }
+  
+  .bar div {
+    height: 100%;
+    border-radius: 4px;
+    background: #4CAF50;
+  }
+  
+  .team-stats div, .time-data div {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .deadlines li {
+    padding: 5px 0;
+    color: #ff5252;
+  }
+  
+  @media screen and (max-width:680px) {
+    
+    .sidebar{
+      display: none;
+    }
+  }

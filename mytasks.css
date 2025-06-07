@@ -1,0 +1,309 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+   font-size: 2rem;
+   margin: 0.01%;
+   
+   transition: background-color 0.3s, color 0.3s;
+}
+h1{
+    font-size: 25px;
+    padding: 15px;
+    color: #1e60ca;
+    
+    border: none;
+}
+.headcontainer{
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid  #e2e8f0;
+    display: flex;
+    justify-content: space-between;
+    width: 99.9%;
+}
+.headcontainer button{
+    width: 40px;
+    font-size: 2rem;
+    height: 40px;
+    border-radius: 50%;
+   margin-top: 5px;
+   margin-right: 10px;
+   background-color: #1e60ca;
+   color: white;
+   cursor: pointer;
+   border: none;
+}
+
+.headcontainer p{
+    margin-right: 20px;
+    font-size: 23px;
+    
+}
+.maincontainer{
+    width: 99.9%;
+    display: flex;
+
+}
+
+.sidebar{
+    width: 17%;
+    min-height: 600px;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    justify-content:start;
+    
+}
+
+.sidebar ul button{
+    padding-right: 60px;
+    width: 200px;
+    height: 40px;
+    font-size: 0.9rem;
+    border-radius:5px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    
+    
+}
+
+i{
+    padding-right: 10px;
+}
+
+.sidebar ul button:hover{
+background-color: #3b82f6;
+transition: 0.6s;
+color: #f8fafc;
+
+}
+
+.sidebar ul i span{
+    font-family: sans-serif; 
+    font-weight:500;
+}
+
+
+.sidebar ul{
+ list-style-type: none;
+ display: flex;  
+ flex-direction: column;
+ gap: 0.3rem;
+ padding-top: 30px;
+ 
+    
+}
+
+.sidebar ul a{
+    text-decoration: none;
+    color: black;
+   
+} 
+
+.sidebar ul a:active{
+   transition: 1s;
+}
+
+/* maincontent -2 - mainboard */
+
+/* mainboard_header */
+.task_mainboard{
+width: 90%;
+background-color: #f8fafc;
+}
+
+h2{
+    padding-top: 20px;
+    padding-left: 10px;
+    font-size: 25px;
+    margin: 10px;
+    font-family: sans-serif;
+    font-weight: 600;
+    opacity: 0.90;
+}
+.mainboard_header{
+    width: 90%;
+    display: flex;
+justify-content: space-between;
+
+}
+.newtask{
+
+    width: 120px;
+    height: 40px;
+    margin-top: 30px;
+    background-color:  #1f6deb;
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 10px;
+    font-size: 0.8rem;
+   cursor: pointer;
+}
+.mainboard_main{
+margin-left: 50px;
+background-color: #f8fafc;
+}
+
+.mainboard_main button{
+ width: fit-content ;
+ height: 30px;
+ padding: 5px;
+ margin-top: 20px;
+ margin-left: 10px;
+ cursor: pointer;
+ border: 1px solid gray;
+ border-radius: 6px;
+}
+.mainboard_main button:first-child{
+    background-color:  #0e58cf;
+    border: none;
+    color: white;
+    border-radius: 6px;
+}
+.mainboard_main button:nth-child(2) a{
+   text-decoration: none;
+   color: black;
+   
+}
+.mainboard_main button a:hover{
+   
+    background-color: #0e58cf;
+    color: white;   
+}
+
+.mainboard_main button:hover{
+    background-color: #0e58cf;
+    color: white;
+    border: none;
+    
+}
+
+
+.taskbox{
+    width: 95%;
+    height: 130px;
+    box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+   font-size: 25px;
+font-family: Arial, Helvetica, sans-serif;
+ margin-left: 10px;
+    transition: 0.6s;
+
+}
+.taskbox:hover{
+    transform: translate(0,-10px);
+}
+
+
+.taskheader{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-top: 10px;
+}
+
+.taskmain{
+    font-size: 14px;
+    margin-top: 20px;
+    margin-left: 15px;
+    color: #64748b;
+}
+
+.taskfooter{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    font-size: 14px;
+    margin-left: 15px;
+    margin-right: 20px;
+    color: #64748b;
+    
+}
+.ft{
+    position: relative;
+}
+
+.taskbox1{
+    margin-top: 50px;
+    margin-left: 20px;
+   
+}
+.taskbox2{
+    margin-top: 60px;
+    width: 95%;
+   position: absolute;
+   top:100px;
+   margin-left: 20px;
+}
+
+.taskbox3{
+    margin-top: 60px;
+    width: 95%;
+   position: absolute;
+   top:250px;
+   margin-left: 20px;
+}
+
+
+.priority1{
+text-align: center;
+    font-size: 14px;
+    width: 35px;
+    height: 20px;
+border-radius: 6px;
+background-color: #f8caca ;
+color: #ef4444;
+}
+
+.priority2{
+    text-align: center;
+        font-size: 14px;
+        width: 80px;
+        height: 20px;
+    border-radius: 6px;
+    background-color: #f7e2ad;
+    color: #f59e0b; 
+    } 
+    
+
+    .priority3{
+        text-align: center;
+            font-size: 14px;
+            width: 60px;
+            height: 20px;
+        border-radius: 6px;
+        background-color: #c8ebd6;
+        color: #06f08e;
+        } 
+    
+
+.taskfooter button{
+    
+        width: 20px;
+        font-size: 1rem;
+        height: 20px;
+        border-radius: 50%;
+      
+       background-color: #1e60ca;
+       color: white;
+       border: none;
+    
+}
+
+
+.edit{
+    cursor: pointer;
+   
+}
+.trash{
+    cursor: pointer;
+}
+
+@media screen and (max-width:750px) {
+    .sidebar{
+        display: none;
+    }
+}
