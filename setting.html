@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="./setting.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="headcontainer">
+        <h1>CreateWare</h1>
+        <p><button>k</button>kavin</p>
+    </div>
+    <div class="maincontainer">
+        <div class="sidebar">
+            <ul>
+                <li><a href="./modern interface.html"><button><i class="fa-solid fa-gauge-high"></i> Dashboard</button></a></li>
+                <li><a href="./mytasks.html"><button ><i class="fa-solid fa-list-check"></i>My Tasks</button></a></li>
+                <li><a href="./team.html"><button><i class="fas fa-users"></i> Team Mem </button></a></li>
+                <li><a href="./calender.html "><button><i class="fa-solid fa-calendar-days"></i> calendar</button></a></li>
+                <li><a href="./projectcard.html"><button><i class="fas fa-file-alt"></i> Projects </button></a></li>
+                <li><a href="./reports.html"><button><i class="fas fa-chart-bar"></i> Reports </button></a></li>
+                <li><a href="#"><button style=" color: azure; background-color: #3b82f6;"><i class="fa-solid fa-gear"></i> Settings </button></a></li>
+            </ul>
+        </div>
+        <div class="task_mainboard">
+              <div class="settings">
+              <h2>Settings</h2>
+              <i class="fa-solid fa-gear" style="color: #3b82f6;"></i>
+              </div>
+              <hr>
+                <div class="appearence">
+                        <h2>Appearence</h2>
+                    <a href="#"><button>Light</button></a>
+                    <a href="#"><button>Dark</button></a>
+                </div>
+                <hr>
+                <div class="taskbehavior">
+                    <h2>Taskbehavior</h2> 
+                    <div class="default">                    
+                        <p>Default Priority :</p>
+                    <select name="prority" id="level">
+                          <option value="low">Low (blue)</option>
+                          <option value="medium">Medium (yellow)</option>
+                          <option value="high">high (red)</option>
+                    </select>
+                    </div>
+                    
+                    <div class="sorttask">
+                        <p>Sort Tasks By :</p>
+                        <select name="sorttask" id="srttask">
+                            <option value="date">Due Date</option>
+                            <option value="medium">Priority (yellow)</option>
+                            <option value="high">Name(A-Z)</option>
+                      </select>
+                    </div>
+
+                    <div class="labels">
+                        <p>Show Priority Labels :</p>
+                        <input type="checkbox" name="" id="label">
+                    </div>
+
+                    </div>
+                    <hr>
+
+                    <div class="notification">
+                        <h2>Notifications</h2>
+
+               <div class="notifi">
+                            <p>Enable Notification :</p>
+                            <input type="checkbox" name="" id="note">
+                        </div>
+
+                    </div>
+                <hr>
+                    <div class="data">
+                        <h2>Data</h2>
+                        <button>Export task (json)</button>
+                        <button>Import task</button>
+                        <button style="background-color: rgb(240, 42, 42);  color: white;">Clear All tasks</button>
+                    </div>
+                    <hr>
+                    <div class="logout"><button>Log out</button></div>
+    </div>
+   </div>
+</body>
+</html>

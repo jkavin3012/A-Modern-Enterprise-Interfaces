@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+ <style>
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+   font-size: 2rem;
+   margin: 0.01%;
+   
+   transition: background-color 0.3s, color 0.3s;
+}
+h1{
+    font-size: 25px;
+    padding: 15px;
+    color: #1e60ca;
+    
+    border: none;
+}
+.headcontainer{
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid  #e2e8f0;
+    display: flex;
+    justify-content: space-between;
+    width: 99.9%;
+}
+.headcontainer button{
+    width: 40px;
+    font-size: 2rem;
+    height: 40px;
+    border-radius: 50%;
+   margin-top: 5px;
+   margin-right: 10px;
+   background-color: #1e60ca;
+   color: white;
+   cursor: pointer;
+   border: none;
+}
+
+.headcontainer p{
+    margin-right: 20px;
+    font-size: 23px;
+    
+}
+.maincontainer{
+    width: 99.9%;
+    display: flex;
+
+}
+
+.sidebar{
+    width: 17%;
+    min-height: 600px;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    justify-content:start;
+    
+}
+
+.sidebar ul button{
+    padding-right: 60px;
+    width: 200px;
+    height: 40px;
+    font-size: 0.9rem;
+    border-radius:5px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    
+}
+
+i{
+    padding-right: 10px;
+}
+
+.sidebar ul button:hover{
+background-color: #3b82f6;
+transition: 0.6s;
+color: #f8fafc;
+
+}
+
+.sidebar ul i span{
+    font-family: sans-serif; 
+    font-weight:500;
+}
+
+
+.sidebar ul{
+ list-style-type: none;
+ display: flex;  
+ flex-direction: column;
+ gap: 0.3rem;
+ padding-top: 30px;
+ 
+    
+}
+
+.sidebar ul a{
+    text-decoration: none;
+    color: black;
+   
+} 
+
+/* maincontainer-2 team members */
+
+h2{
+    padding-top: 20px;
+    padding-left: 10px;
+    font-size: 25px;
+    margin: 10px;
+    font-family: sans-serif;
+    font-weight: 600;
+    opacity: 0.90;
+}
+.team_mainboard{
+    background-color: #f8fafc;
+    width: 97%;
+}
+
+.member-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #3b82f6;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+ 
+  }
+  .team_members{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+  gap: 2rem;  
+}
+
+.member{
+      margin-left: 100px;
+      margin-top: 20px;
+    text-align:   center;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 200px;
+    box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.4);
+    display: flex;
+    gap: 1rem;
+
+}
+.member-info{
+    color: #64748b;
+    font-size: 20px;
+}
+.member:hover{
+    transform: translate(0,-10px)
+}
+.member{
+  transition: 1s;
+}
+
+
+
+@media screen and (max-width:1116px) {
+  .team_members{
+   
+    grid-template-columns: 1fr;
+  }
+
+}
+@media screen and (max-width:700px){
+  .sidebar{
+    display: none;
+   
+  }
+  .member{
+    margin-left: 10px;
+   width: 250px;
+  }
+ 
+}
+
+
+
+ </style>
+
+
+</head>
+<body>
+    <div class="headcontainer">
+        <h1>CreateWare</h1>
+        <p><button>k</button>kavin</p>
+    </div>
+    <div class="maincontainer">
+        <div class="sidebar">
+            <ul>  
+                <li><a href="./modern interface.html"><button><i class="fa-solid fa-gauge-high"> </i> Dashboard</button></a></li>
+                <li><a href="./mytasks.html" ><button><i class="fa-solid fa-list-check"></i> My Tasks </button></a></li>
+                <li><a href="#"><button  style=" color: azure; background-color: #3b82f6"><i class="fas fa-users">  </i> Team Mem</button></a></li>
+                <li><a href="./calender.html"><button><i class="fa-solid fa-calendar-days"></i> calendar</button></a></li>
+                <li><a href="./projectcard.html"><button><i class="fas fa-file-alt"></i> Projects </button></a></li>
+                <li><a href="./reports.html"><button><i class="fas fa-chart-bar"></i> Reports </button></a></li>
+                <li><a href="./setting.html"><button><i class="fa-solid fa-gear"></i> Settings </button></a></li>
+            </ul>
+        </div>
+
+  
+ 
+
+<!-- Team Members Section -->
+<div class="team_mainboard">
+    
+    <h2>Team Members</h2>
+    
+    <div class="team_members"> 
+    <!-- Team Member 1 -->
+    <div class="member">
+      <div class="member-avatar">JD</div>
+      <div class="member-info">
+        <h4>John Doe</h4>
+        <p>Frontend Developer</p>
+        <p>(📞 9870657892)</p>
+      </div>
+    </div>
+  
+    <!-- Team Member 2 -->
+    <div class="member">
+      <div class="member-avatar">AS</div>
+      <div class="member-info">
+        <h4>Alice Smith</h4>
+        <p>UI/UX Designer</p>
+        (📞 9650873246)
+      </div>
+    </div>
+  
+    <!-- Team Member 3 -->
+    <div class="member">
+      <div class="member-avatar">K</div>
+      <div class="member-info">
+        <h4>Kavin</h4>
+        <p>Backend Developer</p>
+        <p>📞 9894228007</p>
+      </div>
+    </div>
+  
+    <!-- Team Member 4 -->
+    <div class="member">
+      <div class="member-avatar">MB</div>
+      <div class="member-info">
+        <h4>Maria Brown</h4>
+        <p>Project Manager</p>
+        <p>📞 9045870657</p>
+      </div>
+    </div>
+  
+    <!-- Team Member 5 -->
+    <div class="member">
+      <div class="member-avatar">TS</div>
+      <div class="member-info">
+        <h4>Taylor Swift</h4>
+        <p>QA Engineer</p>
+        <p>📞 9123402389</p>
+      </div>
+    </div>
+
+    <!-- team member 6 -->
+    <!-- <div class="member">
+        <div class="member-avatar">TS</div>
+        <div class="member-info">
+          <h4>Taylor Swift</h4>
+          <p>QA Engineer</p>
+        </div>
+      </div> -->
+
+
+
+  </div>
+</div>
+
+
+
+</div>
+
+  </div>
+
+</body>
+</html>

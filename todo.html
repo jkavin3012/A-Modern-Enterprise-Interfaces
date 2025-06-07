@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        :root {
+            --primary: #5c6bc0;
+            --primary-light: #8e99f3;
+            --primary-dark: #26418f;
+            --text: #2d3436;
+            --text-light: #636e72;
+            --border: #dfe6e9;
+            --white: #ffffff;
+            --danger: #ff7675;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f6fa;
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 2rem;
+        }
+        
+        .todo-container {
+            width: 100%;
+            max-width: 500px;
+            background-color: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .todo-header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .todo-header h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .todo-input-container {
+            display: flex;
+            padding: 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .todo-input {
+            flex: 1;
+            padding: 0.8rem 1rem;
+            border: 2px solid var(--border);
+            border-radius: 6px 0 0 6px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        
+        .todo-input:focus {
+            border-color: var(--primary-light);
+        }
+        
+        .add-btn {
+            padding: 0 1.5rem;
+            background-color: var(--primary);
+            color: var(--white);
+            border: none;
+            border-radius: 0 6px 6px 0;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+        
+        .add-btn:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        .todo-filters {
+            display: flex;
+            justify-content: center;
+            padding: 0.8rem;
+            background-color: rgba(92, 107, 192, 0.1);
+        }
+        
+        .filter-btn {
+            margin: 0 0.5rem;
+            padding: 0.4rem 1rem;
+            background: none;
+            border: none;
+            color: var(--text-light);
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+        
+        .filter-btn.active {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+        
+        .filter-btn:hover:not(.active) {
+            background-color: rgba(92, 107, 192, 0.2);
+        }
+        
+        .todo-list {
+            list-style: none;
+        }
+        
+        .todo-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            border-bottom: 1px solid var(--border);
+            transition: background-color 0.2s;
+        }
+        
+        .todo-item:hover {
+            background-color: rgba(223, 230, 233, 0.3);
+        }
+        
+        .todo-checkbox {
+            width: 20px;
+            height: 20px;
+            margin-right: 1rem;
+            cursor: pointer;
+            accent-color: var(--primary);
+        }
+        
+        .todo-text {
+            flex: 1;
+            font-size: 1rem;
+        }
+        
+        .todo-item.completed .todo-text {
+            text-decoration: line-through;
+            color: var(--text-light);
+        }
+        
+        .delete-btn {
+            width: 28px;
+            height: 28px;
+            background: none;
+            border: none;
+            color: var(--danger);
+            font-size: 1.2rem;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+        
+        .todo-item:hover .delete-btn {
+            opacity: 1;
+        }
+        
+        .delete-btn:hover {
+            background-color: rgba(255, 118, 117, 0.1);
+        }
+        
+        .todo-stats {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            background-color: rgba(223, 230, 233, 0.3);
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 1rem;
+            }
+            
+            .todo-container {
+                border-radius: 8px;
+            }
+            
+            .todo-input-container {
+                flex-direction: column;
+            }
+            
+            .todo-input {
+                border-radius: 6px;
+                margin-bottom: 0.5rem;
+            }
+            
+            .add-btn {
+                border-radius: 6px;
+                padding: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="todo-container">
+        <div class="todo-header">
+            <h1>To-Do List</h1>
+            <p>What needs to be done ?</p>
+        </div>
+        
+        <div class="todo-input-container">
+            <input type="text" class="todo-input" placeholder="Add a new task...">
+            <button class="add-btn"><a href="./mytasks.html " style="color: white; text-decoration: none;">Add</a></button>
+        </div>
+        
+        <div class="todo-filters">
+            <button class="filter-btn active">All</button>
+            <button class="filter-btn">Active</button>
+            <button class="filter-btn">Completed</button>
+        </div>
+        
+        <ul class="todo-list">
+            <li class="todo-item">
+                <input type="checkbox" class="todo-checkbox">
+                <span class="todo-text">Complete project presentation</span>
+                <button class="delete-btn">×</button>
+            </li>
+            <!-- <li class="todo-item completed">
+                <input type="checkbox" class="todo-checkbox" checked>
+                <span class="todo-text">Buy groceries</span>
+                <button class="delete-btn">×</button>
+            </li> -->
+            <li class="todo-item">
+                <input type="checkbox" class="todo-checkbox">
+                <span class="todo-text">Schedule team meeting</span>
+                <button class="delete-btn">×</button>
+            </li>
+            <li class="todo-item">
+                <input type="checkbox" class="todo-checkbox">
+                <span class="todo-text">Review code changes</span>
+                <button class="delete-btn">×</button>
+            </li>
+        </ul>
+        
+        <div class="todo-stats">
+            <span>3 tasks remaining</span>
+            <span>1 completed</span>
+        </div>
+    </div>
+</body>
+</html>
